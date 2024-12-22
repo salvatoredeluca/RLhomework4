@@ -104,7 +104,7 @@ rqt
 
 ```
 
-To execute the corrects waypoint go to the config folder of the rl_fra2mo_description package and change the strategy in "aruco" then run the command to make the robot move sufficiently close to the Aruco to execute the detection running the command
+Then run the command to make the robot move sufficiently close to the Aruco to execute the detection running the command
 
 ```bash
 ros2 run rl_fra2mo_description aruco_goal.py
