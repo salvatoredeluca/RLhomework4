@@ -1,5 +1,17 @@
 
 # FOLLOWING THE WAYPOINTS
+
+In order execute the corrects waypoints go to the config folder of the rl_fra2mo_description package and change the strategy in "path" and then run
+```bash
+colcon build
+
+```
+```bash
+. install/setup.bash
+
+```
+
+
 Spawn the robot in Gazebo
 ```bash
 ros2 launch rl_fra2mo_description gazebo_fra2mo.launch.py
@@ -17,12 +29,20 @@ Visualize the robot on RVIZ with the proper configuration for the waypoints task
 ```bash
 ros2 launch rl_fra2mo_description display_fra2mo.launch.py rviz_file_name:=goals.rviz
 ```
-To execute the corrects waypoints go to the config folder of the rl_fra2mo_description package and change the strategy in "path" then run the command
-
+Run the command to make the robot follow the waypoints
 ```bash
 ros2 run rl_fra2mo_description follow_waypoints.py
 ```
 # EXPLORING THE MAP
+In order execute the corrects waypoints go to the config folder of the rl_fra2mo_description package and change the strategy in "explore" and then run
+```bash
+colcon build
+
+```
+```bash
+. install/setup.bash
+
+```
 
 Spawn the robot in Gazebo
 ```bash
@@ -44,7 +64,7 @@ ros2 launch rl_fra2mo_description display_fra2mo.launch.py rviz_file_name:=explo
 
 ```
 
-To execute the corrects waypoints go to the config folder of the rl_fra2mo_description package and change the strategy in "explore" then run the command
+Run the command to make the robot follow the waypoints
 ```bash
 ros2 run rl_fra2mo_description follow_waypoints.py
 ```
@@ -52,6 +72,16 @@ ros2 run rl_fra2mo_description follow_waypoints.py
 
 
 # VISION-BASED TASK
+To execute the corrects waypoint go to the config folder of the rl_fra2mo_description package and change the strategy in "aruco" and then run
+```bash
+colcon build
+
+```
+```bash
+. install/setup.bash
+
+```
+
 Spawn the robot on Gazebo
 ```bash
 ros2 launch rl_fra2mo_description gazebo_fra2mo.launch.py

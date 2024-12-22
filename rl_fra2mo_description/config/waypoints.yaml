@@ -102,4 +102,4 @@ waypoints:
 
 
 mode:
-- strategy: "aruco" #path or explore or aruco
+- strategy: "explore" #path or explore or aruco
