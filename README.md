@@ -12,22 +12,44 @@ Load the NAV2 stack and the SLAM node
 ros2 launch rl_fra2mo_description fra2mo_explore.launch.py
 
 ```
-Visualize the robot on RVIZ
-```bash
-ros2 launch rl_fra2mo_description display_fra2mo.launch.py
-```
+Visualize the robot on RVIZ with the proper configuration for the waypoints task
 
-Make the robot follow the desired waypoints
 ```bash
 ros2 launch rl_fra2mo_description display_fra2mo.launch.py rviz_file_name:=goals.rviz
 ```
+To execute the corrects waypoints go to the config folder of the rl_fra2mo_description package and change the strategy in "path" then run the command
 
-Make the roboto explore the map
+```bash
+ros2 run rl_fra2mo_description follow_waypoints.py
+```
+# EXPLORING THE MAP
 
+Spawn the robot in Gazebo
+```bash
+ros2 launch rl_fra2mo_description gazebo_fra2mo.launch.py
+
+```
+
+Load the NAV2 stack and the SLAM node
+
+```bash
+ros2 launch rl_fra2mo_description fra2mo_explore.launch.py
+
+```
+
+
+Visualize the robot on RVIZ with the proper configuration for the explore task
 ```bash
 ros2 launch rl_fra2mo_description display_fra2mo.launch.py rviz_file_name:=explore.rviz
 
 ```
+
+To execute the corrects waypoints go to the config folder of the rl_fra2mo_description package and change the strategy in "explore" then run the command
+```bash
+ros2 run rl_fra2mo_description follow_waypoints.py
+```
+
+
 
 # VISION-BASED TASK
 Spawn the robot on Gazebo
@@ -51,7 +73,7 @@ To visualize the result of the detection run
 rqt
 
 ```
-Make the Robot move sufficiently close to the Aruco to execute the detection
+Make the Robot move sufficiently close to the Aruco to execute the detection running the command
 
 ```bash
 ros2 run rl_fra2mo_description aruco_goal.py
