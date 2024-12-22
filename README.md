@@ -1,5 +1,5 @@
 
-#FOLLOWING THE WAYPOINTS
+# FOLLOWING THE WAYPOINTS
 Spawn the robot in Gazebo
 ```bash
 ros2 launch rl_fra2mo_description gazebo_fra2mo.launch.py
@@ -29,7 +29,7 @@ ros2 launch rl_fra2mo_description display_fra2mo.launch.py rviz_file_name:=explo
 
 ```
 
-#VISION-BASED TASK
+# VISION-BASED TASK
 Spawn the robot on Gazebo
 ```bash
 ros2 launch rl_fra2mo_description gazebo_fra2mo.launch.py
